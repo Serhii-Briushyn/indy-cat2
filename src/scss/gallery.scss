@@ -72,9 +72,16 @@
 @include media(desktop) {
   .swiper-button-prev {
     left: 72px !important;
+    &:hover {
+      transform: translateX(-10px);
+    }
   }
+
   .swiper-button-next {
     right: 72px !important;
+    &:hover {
+      transform: translateX(10px);
+    }
   }
   .swiper-button-prev,
   .swiper-button-next {
@@ -82,9 +89,5 @@
     width: 66px !important;
     height: 66px !important;
     transition: transform 0.3s ease;
-
-    &:hover {
-      transform: scale(1.1);
-    }
   }
 }
