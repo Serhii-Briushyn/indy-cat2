@@ -19,7 +19,7 @@
     .about-us-description {
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      gap: 14px;
 
       .about-us-subtitle {
         font-family: 'Raleway', sans-serif;
@@ -31,6 +31,52 @@
         font-family: 'Raleway', sans-serif;
         font-weight: 400;
         @include font(20, 30);
+      }
+    }
+
+    .about-us-image-wrapper {
+      position: relative;
+      width: 288px;
+      height: 318px;
+
+      .about-us-image {
+        position: absolute;
+        width: 100%;
+        max-width: 121px;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .about-us-image--left {
+        top: 0;
+        left: 0;
+        animation: float 3s ease-in-out infinite;
+        animation-delay: 0s;
+      }
+
+      .about-us-image--center {
+        top: 29px;
+        left: 84px;
+        animation: float 3s ease-in-out infinite;
+        animation-delay: 0.5s;
+      }
+
+      .about-us-image--right {
+        bottom: 0;
+        right: 0;
+        animation: float 3s ease-in-out infinite;
+        animation-delay: 1s;
+      }
+
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-10px);
+        }
       }
     }
   }
@@ -57,7 +103,7 @@
       gap: 24px;
 
       .about-us-description {
-        max-width: 558px;
+        width: 100%;
 
         .about-us-subtitle {
           @include font(28, 42);
@@ -65,6 +111,21 @@
 
         .about-us-text {
           @include font(28, 42);
+        }
+      }
+
+      .about-us-image-wrapper {
+        position: relative;
+        min-width: 474px;
+        min-height: 551px;
+
+        .about-us-image {
+          max-width: 198px;
+        }
+
+        .about-us-image--center {
+          top: 62px;
+          left: 138px;
         }
       }
     }
