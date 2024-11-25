@@ -1,0 +1,122 @@
+.page-header {
+  position: sticky;
+  top: 0;
+  padding: 24px 16px;
+
+  @include media(desktop) {
+    padding: 40px 72px;
+  }
+}
+
+.page-button {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  @include font(11, 17);
+  padding: 4px;
+  border-radius: 8px;
+  width: max-content;
+  transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include media(desktop) {
+    @include font(18, 27);
+  }
+
+  &:hover {
+    background-color: $_header_accent_color;
+  }
+}
+
+.page-container {
+  padding: 32px 16px 24px;
+
+  h1 {
+    font-family: 'Carter One', sans-serif;
+    font-weight: 400;
+    @include font(28, 42);
+    text-align: center;
+    margin-bottom: 24px;
+  }
+
+  h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+    @include font(20, 30);
+    text-align: center;
+    margin-bottom: 16px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 24px;
+  }
+
+  p,
+  li,
+  a {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    @include font(16, 24);
+  }
+
+  li {
+    list-style: outside;
+    margin-left: 24px;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  .page-intro-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    @include font(20, 30);
+  }
+
+  .page-paragraph {
+    margin-top: 24px;
+  }
+
+  @include media(desktop) {
+    padding: 0 72px 40px;
+
+    h1 {
+      @include font(48, 72);
+      margin-bottom: 32px;
+    }
+
+    h2 {
+      @include font(28, 42);
+      margin-bottom: 32px;
+    }
+
+    div {
+      margin-bottom: 40px;
+      gap: 24px;
+    }
+
+    p,
+    li,
+    a {
+      @include font(24, 36);
+    }
+
+    li {
+      margin-left: 36px;
+    }
+
+    .page-intro-text {
+      @include font(28, 42);
+    }
+
+    .page-paragraph {
+      margin-top: 72px;
+      text-align: center;
+    }
+  }
+}

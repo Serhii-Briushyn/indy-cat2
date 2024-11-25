@@ -1,0 +1,12 @@
+@import './breakpoints';
+
+.container {
+  background-color: $_main_bg_color;
+  width: $mobile;
+  margin-left: auto;
+  margin-right: auto;
+
+  @include media(desktop) {
+    width: $desktop;
+  }
+}

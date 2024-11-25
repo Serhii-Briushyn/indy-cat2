@@ -1,0 +1,83 @@
+.reviews-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
+
+  .reviews-title {
+    font-family: 'Carter One', sans-serif;
+    font-weight: 400;
+    @include font(28, 42);
+    margin-bottom: 24px;
+  }
+
+  .reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 100%;
+
+    .reviews-item {
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-start;
+      flex-direction: column;
+      gap: 16px;
+      border-radius: 8px;
+      padding: 16px;
+      background-color: $_header_color;
+
+      .rev-item-name {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+        @include font(16, 24);
+        padding-bottom: 16px;
+        border-bottom: 4px solid $_main_color;
+        width: 100%;
+      }
+
+      .rev-item-text {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        font-size: 16px;
+        @include font(16, 24);
+      }
+    }
+  }
+}
+
+@include media(desktop) {
+  .reviews-container {
+    background-image: image-set(
+      url(../img/reviews/bg-desk.png) 1x,
+      url(../img/reviews/bg-desk@2x.png) 2x
+    );
+    background-repeat: no-repeat;
+    background-position: bottom right;
+    background-size: auto auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 64px 72px;
+
+    .reviews-title {
+      @include font(48, 72);
+      margin-bottom: 40px;
+    }
+
+    .reviews-list {
+      .reviews-item {
+        gap: 24px;
+
+        .rev-item-name {
+          @include font(24, 36);
+          padding-bottom: 24px;
+        }
+
+        .rev-item-text {
+          @include font(24, 36);
+        }
+      }
+    }
+  }
+}

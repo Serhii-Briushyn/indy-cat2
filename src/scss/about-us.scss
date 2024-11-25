@@ -1,0 +1,72 @@
+.about-us-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 16px;
+
+  .about-us-title {
+    font-family: 'Carter One', sans-serif;
+    font-weight: 400;
+    @include font(28, 42);
+    margin-bottom: 24px;
+  }
+
+  .about-us-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    .about-us-description {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      .about-us-subtitle {
+        font-family: 'Raleway', sans-serif;
+        @include font(20, 30);
+        line-height: 1.5;
+      }
+
+      .about-us-text {
+        font-family: 'Raleway', sans-serif;
+        font-weight: 400;
+        @include font(20, 30);
+      }
+    }
+  }
+}
+
+@include media(desktop) {
+  .about-us-container {
+    background-image: image-set(
+      url(../img/about-us/bg-desk.png) 1x,
+      url(../img/about-us/bg-desk@2x.png) 2x
+    );
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: auto auto;
+    padding: 64px 72px;
+
+    .about-us-title {
+      @include font(48, 72);
+      margin-bottom: 40px;
+    }
+
+    .about-us-wrapper {
+      flex-direction: row-reverse;
+      gap: 24px;
+
+      .about-us-description {
+        max-width: 558px;
+
+        .about-us-subtitle {
+          @include font(28, 42);
+        }
+
+        .about-us-text {
+          @include font(28, 42);
+        }
+      }
+    }
+  }
+}

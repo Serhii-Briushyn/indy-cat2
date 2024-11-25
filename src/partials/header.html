@@ -1,13 +1,76 @@
-<header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
+<div class="header-container container">
+  <a href="./index.html" class="header-homepage-link">
+    <picture>
+      <source
+        srcset="/img/header/logo-desk.png 1x, /img/header/logo-desk@2x.png 2x"
+        type="image/png"
+        media="(min-width: 1200px)"
+      />
+      <source
+        srcset="/img/header/logo-mob.png 1x, /img/header/logo-mob@2x.png 2x"
+        type="image/png"
+        media="(max-width: 1199px)"
+      />
+      <img
+        src="/img/header/logo-mob.png"
+        alt="Indy Cat"
+        class="header-logo-image"
+      />
+    </picture>
+  </a>
 
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
+  <button type="button" class="header-button-menu" aria-label="toggle-menu">
+    <svg class="header-button-icon-open" width="24" height="24">
+      <use href="/img/sprite.svg#icon-menu-open"></use>
+    </svg>
+    <svg class="header-button-icon-close hidden" width="24" height="24">
+      <use href="/img/sprite.svg#icon-menu-close"></use>
+    </svg>
+  </button>
+
+  <nav class="header-desk-nav">
+    <ul class="header-list">
+      <li class="header-item">
+        <a href="#hero-id" class="header-link">Home</a>
+      </li>
+      <li class="header-item">
+        <a href="#reviews-id" class="header-link">Reviews</a>
+      </li>
+      <li class="header-item">
+        <a href="#about-us-id" class="header-link">About Us</a>
+      </li>
+      <li class="header-item">
+        <a href="#advantages-id" class="header-link">Advantages</a>
+      </li>
+      <li class="header-item">
+        <a href="#gallery-id" class="header-link">Gallery</a>
+      </li>
+      <li class="header-item">
+        <a href="#benefits-id" class="header-link">Benefits</a>
       </li>
     </ul>
   </nav>
-</header>
+  <div class="header-backdrop"></div>
+  <nav class="header-mob-nav">
+    <ul class="header-list">
+      <li class="header-item">
+        <a href="#hero-id" class="header-link">Home</a>
+      </li>
+      <li class="header-item">
+        <a href="#reviews-id" class="header-link">Reviews</a>
+      </li>
+      <li class="header-item">
+        <a href="#about-us-id" class="header-link">About Us</a>
+      </li>
+      <li class="header-item">
+        <a href="#advantages-id" class="header-link">Advantages</a>
+      </li>
+      <li class="header-item">
+        <a href="#gallery-id" class="header-link">Gallery</a>
+      </li>
+      <li class="header-item">
+        <a href="#benefits-id" class="header-link">Benefits</a>
+      </li>
+    </ul>
+  </nav>
+</div>

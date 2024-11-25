@@ -1,0 +1,77 @@
+.advantages__container {
+  padding: 32px 16px;
+
+  @include media(desktop) {
+    padding: 64px 72px;
+  }
+}
+
+.advantages__title {
+  font-family: 'Carter One', system-ui;
+  font-weight: 400;
+  @include font(28, 42);
+  margin-bottom: 24px;
+  text-align: center;
+
+  @include media(desktop) {
+    @include font(48, 72);
+    margin-bottom: 40px;
+  }
+}
+
+.advantages__list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+  @include media(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: end;
+    gap: 32px;
+  }
+}
+.advantages__item:nth-child(1),
+.advantages__item:nth-child(2) {
+  margin-right: auto;
+}
+
+.advantages__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 8px;
+  padding: 0 16px;
+  border-radius: 8px;
+  color: $_main_color;
+  background-color: $_header_accent_color;
+  height: 183px;
+
+  @include media(desktop) {
+    width: 358px;
+    height: 231px;
+    text-align: left;
+  }
+}
+
+.advantages__subtitle {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  @include font(16, 24);
+
+  @include media(desktop) {
+    @include font(24, 36);
+  }
+}
+
+.advantages__descriptions {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  @include font(16, 24);
+
+  @include media(desktop) {
+    @include font(24, 36);
+  }
+}

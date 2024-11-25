@@ -1,0 +1,93 @@
+.hero-container {
+  padding: 48px 16px;
+  background-image: image-set(
+    url(../img/hero/bg-mob.png) 1x,
+    url(../img/hero/bg-mob@2x.png) 2x
+  );
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: contain;
+
+  .hero-title {
+    font-family: 'Carter One', sans-serif;
+    font-weight: 400;
+    @include font(40, 60);
+    margin-bottom: 16px;
+  }
+
+  .hero-text {
+    font-family: 'Raleway', sans-serif;
+    font-weight: 400;
+    @include font(24, 36);
+    margin-bottom: 25px;
+  }
+
+  .hero-image {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 24px;
+  }
+
+  .hero-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    gap: 12px;
+    border-radius: 8px;
+    border: 2px solid #a6a6a6;
+    background-color: #fff;
+    margin-left: auto;
+    margin-right: auto;
+    width: 200px;
+    height: 56px;
+    transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover {
+      background-color: $_header_accent_color;
+    }
+
+    &.hero-button-desk {
+      display: none;
+    }
+  }
+}
+
+@include media(desktop) {
+  .hero-container {
+    padding: 104px 72px 128px 72px;
+    background-position: left top;
+    background-image: image-set(
+      url(../img/hero/bg-desk.png) 1x,
+      url(../img/hero/bg-desk@2x.png) 2x
+    );
+    background-size: auto auto;
+    display: flex;
+    justify-content: space-between;
+
+    .hero-title {
+      @include font(80, 120);
+      margin-bottom: 32px;
+    }
+
+    .hero-text {
+      @include font(48, 48);
+      margin-bottom: 40px;
+    }
+
+    .hero-button {
+      &.hero-button-desk {
+        display: flex;
+        margin: 0;
+      }
+
+      &.hero-button-mob {
+        display: none;
+      }
+    }
+
+    .hero-image {
+      margin: 0;
+    }
+  }
+}
