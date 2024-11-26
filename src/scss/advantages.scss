@@ -48,34 +48,34 @@
   color: $_main_color;
   background-color: $_header_accent_color;
   height: 183px;
-  position: relative;
-  overflow: hidden;
-
-  &:hover::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(255, 255, 255, 0.3);
-    mix-blend-mode: overlay;
-    animation: shine 3s linear infinite;
-  }
-
-  @keyframes shine {
-    0% {
-      transform: translateX(-100%);
-    }
-    100% {
-      transform: translateX(100%);
-    }
-  }
 
   @include media(desktop) {
     width: 358px;
     height: 231px;
     text-align: left;
+    position: relative;
+    overflow: hidden;
+
+    &:hover::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(255, 255, 255, 0.3);
+      mix-blend-mode: overlay;
+      animation: shine 3s linear infinite;
+    }
+
+    @keyframes shine {
+      0% {
+        transform: translateX(-100%);
+      }
+      100% {
+        transform: translateX(100%);
+      }
+    }
   }
 }
 
