@@ -1,13 +1,6 @@
 @use 'sass:math';
 @import './breakpoints';
-/*
-screen types:
-    mobile,
-    to-tablet
-    tablet,
-    to-desktop
-    desktop,
-*/
+
 @mixin media($_screen) {
   @if $_screen == mobile {
     @media screen and (min-width: $mobile) {
